@@ -129,3 +129,19 @@ $ ng new --help
 ng new normal
 cd normal
 npm start
+
+4) Programacion reactiva
+RxJs es el port a JavaScript de la librería Reactive Extensions que ha sido portada a numerosos lenguajes de programación
+y que toma lo mejor de fuentes tan diversas como la programación funcional, el patrón Observer o el patrón iterador.
+La programación Reactiva es programación orientada al manejo de streams de datos asíncronos y la propagación del cambio.
+Está es un poco la frase standard, pero nos deja un poco fríos al leerla, así que vamos a tratar de explicarlo con un poquito
+más de detalle.
+que es stream?
+Un stream es un flujo de datos y tradicionalmente los streams han estado ligados a operaciones I/O como lectura/escritura de
+ficheros o querys a base de datos. En RxJs, no es muy diferente ya que sea cual sea el origen de la información, será tratada
+como un stream.Aqui podemos ver stream muy simple que emite los valores contenidos en un Array:
+
+const arrayStream$ = Rx.Observable.from([10,20,30]);  
+// >> 10, 20, 30
+Una de las máximas en la programación reactiva es que "todo es un stream" por lo que con RxJs, cualquier flujo de información
+será tratada como un stream. Eventos del ratón, Arrays, rangos de números, promesas, etc. Todo será un stream.

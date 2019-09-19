@@ -1,0 +1,62 @@
+1) ¿Qué es un observable en RXJS?
+R// un observable es una representacion de un conjunto de valores,
+ se maneja de manera asincrona y es considera como el bloque mas basico de RxJS
+2) ¿Cómo se usa en angular? y de mínimo 2 ejemplos.
+En angular se usa con el metodo Obervable. Primero se importa 
+import {Observable} from ‘rxjs’; 
+Se deben recibir valores de los observables, para esto se necesita suscribirse
+hay dos formas de suscribirse: la automatica y manual, en la automatica, angular
+hace todo, mantiene y cancela la suscripcion por si mismo, y en la manual, 
+la hacemos nosotros, utilizando el metodo subscribe(), y es muy util a la hora de
+hacer uso de los datos antes de mostrarlos.
+en angular tenemos varias operaciones para estos observables: map(),filter(),concat()
+y flatMap(), y permiten manipular la informacion suministrada en estas colecciones
+Ejemplos:
+Para los ejemplos voy a poner uno en donde se hace la suscripcion automatica y otra
+manual, los ejemplos los saque de la pagina:https://medium.com/@damithadayananda/angular-6-rxjs-observable-6ca60411125b
+De forma automatica:
+
+public getApiData(): Observable<UserApiInterface[]> { 
+this.apiData = this.http.get<UserApiInterface[(‘https://jsonplaceholder.typicode.com/posts'); 
+}
+<section> 
+  <ul> 
+   <li *ngFor=”let item of apiData | async” > 
+    <p>{{item.title}}</p> 
+   </li> 
+  </ul> 
+ </section>
+-------------------------------------------------------------------
+De forma manual:
+this.observableService.getApiData().subscribe( 
+ res => {console.log(res); 
+ this.apiData = res; }, 
+ );
+
+3) ¿Qué es ECMAScript? y ¿cuál es su versión actual?
+El termino surge en 1997 con la idea de estandarizar a JavaScript, y principalmente
+busca determinar como se emplea Js, y asi permitirle a los desarroladores desarrollar
+las herramientas adecuadas para realizar una correcta interpretacion.
+Version:Desde el 2015 la version 6
+4) ¿Qué es una promesa en JavaScript?
+Usado tambien de forma asincrona, y representa un valor que puede estar
+disponible ya, luego o nunca, como lo dice la palabra, una promesa tiene una 
+consecuencia,
+5) Indique los actuales, estilos o estándares de codificación, de una 
+breve definición de por lo menos 5
+-Comentarios: documentar bien el codigo 
+-Convenio de denominaciones o naming conventions: Ayuda a elegir los nombres de las
+variables, clases, funciones
+-Legibilidad – Formato y espaciados: Busca hacer mas facil de enterder el codigo
+definiendo una estructura de donde ir las llaves, parentesis, corchetes, tabulaciones,
+etc
+
+
+Bibliografias:
+https://medium.com/@damithadayananda/angular-6-rxjs-observable-6ca60411125b
+https://codecraft.tv/courses/angular/reactive-programming-with-rxjs/streams-and-reactive-programming/
+https://rxjs-dev.firebaseapp.com/guide/observable
+http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
+https://www.arsys.es/blog/programacion/ecmascript-javascript/
+https://devcode.la/blog/que-es-y-por-que-aprender-ecmascript/
+https://www.ohmyroot.com/buenas-practicas-legibilidad-del-codigo/

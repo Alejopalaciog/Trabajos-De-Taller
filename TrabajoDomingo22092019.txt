@@ -1,0 +1,104 @@
+a.       NodeJS
+Definicion
+Entorno para ejecucion en multiplataforma, fue construido con motor v8 de Js
+Ventajas
+-es de codigo abierto
+-Se puede manejar backend y frontend, conocido como fullstack
+-Es multiplataforma
+Desventajas
+-no sirve para archivos estaticos
+-tiene una arquitectura muy basica
+-no es confiable refactorizar un codigo
+b.       .Net core
+Definicion
+es una version de Microsoft que busca innovar con el desarrollo de apps .Net, 
+por que al igual que NodeJs, trabaja bajo el concepto de multiplataforma y codigo libre
+Ventajas
+-Mejorar el desarrollo de microservicios
+-Las aplicaciones son mas escalables
+-Al igual que NodeJs, es muultiplataforma y de codigo abierto
+Desventajas
+- Muy costoso migrar de Net framework a Net core
+c.       Spring Boot (Java)
+Definicion
+Es una tecnologia con la intencion de optimizar la creacion de un proyecto, donde 
+se enfoca unicamente en la tarea de desarrollo, esta hecho en Java
+Ventajas
+-Ahorra tiempo a la hora de descargar las dependencias y al desplegar a un servidor
+Desventajas
+-Aumenta de forma innecesaria el tamaño binario de independencias no utilizadas
+-No es posible personificar el registro
+d.       Python
+Definicion
+Lenguaje de programacion multiparadigma y a su ves, es interpretado
+Ventajas
+- No nececesita compilar para ejecutarse
+- Al igual que todos, es multiplataforma
+- Cantidad absurda de librerias que facilitan el desarrollo
+Desventajas
+- Cuando estas enfocado en la web, su curva de aprendizaje es compleja
+- Muchos servidores no tienen soporte a python
+
+e.       Scala
+Definicion
+Al igual que python scala es multiparadigma (funcional, orientado a objetos),
+fue diseñado para expresar patrones de programacion de forma breve
+Ventajas
+-No requiere tanto codigo como java
+-Es compatible con Java Virtual Machine
+Desventajas
+- descuido de versiones anteriores, lo que genera fallos de compatibilidad
+- Es complejo de aprender cuando se es principiante 
+f.        Ruby
+Definicion
+al igual que python, es interpretado y multiparadigma, fue diseñado para mejorar
+la productividad del desarrollador, buscando siempre una buena interfaz de usuario.
+Ventajas
+-codigo libre
+-ahorro de codigo
+Desventajas
+- no es un lenguaje muy conocido
+g.       Rust
+Definicion
+Es un lenguaje de programacion,fue desarrollado por ings de mozilla, es compilado,
+y es muy nuevo, su primer version fue en el 2015, y es usado para desarrollar
+software donde el usuario no interactue con el sistema
+Ventajas
+- permite trabajar directamente con el procesador de forma segura
+-cuenta con su propio manejador de paquetes
+- permite integrar proyectos en produccion 
+Desventajas
+-no cuenta con un recolector de basura
+-es necesario saber c++ o c
+
+DEFINICIONES
+-Programacion Funcional:
+Paradigma de la programacion donde se hace uso de funciones matematicas
+-Programacion orientada a objetos
+Paradigma de la programacion donde los objetos que son instancias de la clase(plantilla)
+que tiene caracteristicas especificas, usan los datos que entran, para obtener un tipo
+de dato de la clase.
+-Programacion orientada a eventos
+Paradigma de la programacion donde la estructura y la ejecucion de los programas
+son determinados por los eventos que ocurren en el sistema
+-Programación reactiva
+Paradigma de la programacion, donde el asincronismo es su filosofia, es basado
+en el flujo de datos que se encargan en transmitir cambios a nuestra app
+-Microservicios
+Con la idea de solucionar el problema del que solo fuera backend, surge los microservicios
+para impulsar el desarrollo, pero que son? es una forma de programar, donde se dividen
+componentes, donde se compilan de forma independiente pero funcionan en conjunto para 
+realizar las mismas tareas, y cada proceso de estos se le llama microservicio.
+Bibliografia
+https://www.oscarblancarteblog.com/2017/05/29/introduccion-a-nodejs-2/
+https://dotnet.microsoft.com/apps/aspnet
+https://www.redhat.com/es/topics/microservices
+https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/bid/394442/qu-es-la-arquitectura-orientada-a-servicios-soa
+https://profile.es/blog/que-es-la-programacion-reactiva-una-introduccion/
+https://www.arquitecturajava.com/rxjs-la-programacion-reactiva/
+https://codigofacilito.com/articulos/rust
+https://es.wikipedia.org/wiki/Programaci%C3%B3n_funcional
+https://platzi.com/clases/1441-ruby/15842-que-es-ruby-ventajas-desventajas-y-quienes-lo-esta/
+https://www.ecured.cu/Scala
+https://www.ecured.cu/Java_Virtual_Machine
+https://desarrolloweb.com/articulos/1325.php

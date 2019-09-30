@@ -7,6 +7,7 @@ import { MaskDirective } from './mask.directive';
 import { MaskCedDirective } from './mask-ced.directive';
 import { MaskMontoDirective } from './mask-monto.directive';
 import { MaskCorreoDirective } from './mask-correo.directive';
+import { MaskTestDirective } from './mask-test.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MaskCorreoDirective } from './mask-correo.directive';
     MaskDirective,
     MaskCedDirective,
     MaskMontoDirective,
-    MaskCorreoDirective
+    MaskCorreoDirective,
+    MaskTestDirective
   ],
   imports: [
     BrowserModule,

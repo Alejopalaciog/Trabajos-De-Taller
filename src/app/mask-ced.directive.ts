@@ -1,5 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
-let c = 0;
+import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 @Directive({
   selector: '[appMaskCed]'
 })
@@ -9,15 +8,14 @@ export class MaskCedDirective {
   public Allow : number[] = [8,48,49,50,51,52,53,54,55,56,57,96,97,98,99,100,101,102,103,104,105];
   public zero: number [] = [48,96];
   constructor( public ref: ElementRef ) {
-    this.Element = ref.nativeElement;  
+    this.Element = ref.nativeElement;
   }  
   public setInput(value: any): void {
     this.Element.value = value;
-    this.Element.dispatchEvent(new Event('input'));
+    this.Element.dispatchEvent(new Event('input'));//preguntar
   }
 
   @HostListener('keyup',['$event']) public showevent(event): void { //Listener se utiliza para obtener los eventos desde el html
-    c++;
     const val = <string>event.target.value;
     
     if(this.zero.includes(+event.keyCode) && val.charAt(0)=="0"){
@@ -27,7 +25,7 @@ export class MaskCedDirective {
         this.setInput(val);
         console.log(event);
       } else {
-        const regex: RegExp = new RegExp('[0-9]{9}','g');
+        const regex: RegExp = new RegExp('[0-9]','g');//que es la g?
         if(val.match(regex) !== null){
           const result = val.match(regex).join('');
           this.setInput(result);
@@ -42,7 +40,7 @@ export class MaskCedDirective {
   }
 
   public ngOnInit(): void {
-    this.Element.autocomplete = 'off';
+    this.Element.autocomplete = 'off';    
   }
 
   @HostListener('blur', ['$event']) blurEvent(e: any) {
@@ -53,6 +51,7 @@ export class MaskCedDirective {
     }else{
       this.setInput(null);
     }
+    
   }
 
   @HostListener('paste', ['$event']) blockPaste(e: KeyboardEvent) {

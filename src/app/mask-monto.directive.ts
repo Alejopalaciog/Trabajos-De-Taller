@@ -1,5 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
-let c = 0;
+import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 @Directive({
   selector: '[appMaskMonto]'
 })
@@ -17,7 +16,6 @@ export class MaskMontoDirective {
   }
 
   @HostListener('keyup',['$event']) public showevent(event): void { //Listener se utiliza para obtener los eventos desde el html
-    c++;
     const val = <string>event.target.value;
     
     if(this.zero.includes(+event.keyCode) && val.charAt(0)=="0"){
@@ -51,9 +49,9 @@ export class MaskMontoDirective {
         break;
         case 4: this.setInput("$"+fragmentar.substring(0,1)+"."+fragmentar.substring(1,4)+",00");
         break;
-        case 5: this.setInput("$"+fragmentar.substring(0,2)+"."+fragmentar.substring(1,4)+",00");
+        case 5: this.setInput("$"+fragmentar.substring(0,2)+"."+fragmentar.substring(2,5)+",00");
         break;
-        case 6: this.setInput("$"+fragmentar.substring(0,3)+"."+fragmentar.substring(1,4)+",00");
+        case 6: this.setInput("$"+fragmentar.substring(0,3)+"."+fragmentar.substring(3,6)+",00");
         break;
         case 7: this.setInput("$"+fragmentar.substring(0,1)+"'"+fragmentar.substring(1,4)+"."+fragmentar.substring(4,7)+",00");
         break;
@@ -78,5 +76,8 @@ export class MaskMontoDirective {
       //this.setInput(fragmentar.substring(1,fragmentar.length));
       this.setInput(null);
     }
+  }
+  public ngOnInit(): void {
+    this.Element.autocomplete = 'off';
   }
 }
